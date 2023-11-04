@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var fname = "amir";
+      if (fname == "amir" || fname == "reza") {
+        console.log("your welcom");
+      } else {
+        console.log("your are not allowed");
+      }
+
+      var height = 1.8;
+      var weight = 83;
+      var bmi = weight / height ** 2;
+      console.log(bmi);
+      if (bmi <= 18.5) {
+        console.log("kambood vazn");
+      } else if (bmi > 18.5 && bmi <= 24.5) {
+        console.log("vazn salamat");
+      } else if (bmi > 24.5 && bmi <= 30) {
+        console.log("ezafe vazn");
+      }
+
+      console.log("===================");
+
+      function sum(num1, num2) {
+        var num3 = num1 + num2;
+        return num3;
+      }
+      var s = sum(12, 42);
+      console.log(s);
+    </script>
+  </body>
+</html>
