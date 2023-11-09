@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class wallet {
+        constructor(fname, c) {
+          this.fname = fname;
+          this.currenmony = c;
+        }
+        set currenmony(value) {
+          if (value < 0) this._currenmony = 0;
+          else this._currenmony = value;
+        }
+
+        get currenmony() {
+          return `${this._currenmony}$`;
+        }
+      }
+
+      let std2 = new wallet("reza");
+      std2.currenmony = 250;
+      console.log(std2);
+
+      console.log(std2.currenmony);
+
+      class Math {
+        static sum(num1, num2) {
+          console.log(num1 + num2);
+        }
+      }
+
+      Math.sum(10, 15);
+    </script>
+  </body>
+</html>

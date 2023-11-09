@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class car {
+        constructor(color, speed) {
+          this.color = color;
+          this.speed = speed;
+        }
+        goforward() {
+          console.log("go straight ahead");
+        }
+      }
+
+      var pride = new car("green", 150);
+      console.log(pride);
+
+      var bmw = new car("red", 200);
+      bmw.color = "yellow";
+      console.log(bmw);
+
+      class wallet {
+        constructor(fname, currenmony) {
+          this.fname = fname;
+          this.currenmony = currenmony;
+          if (currenmony < 200) this.currenmony = 200;
+          else this.currenmony = currenmony;
+        }
+        addmony(amount) {
+          this.currenmony = this.currenmony + amount;
+        }
+        minusmony(amount) {
+          this.currenmony = this.currenmony - amount;
+        }
+        logmony() {
+          console.log(`${this.fname}==========>${this.currenmony}`);
+        }
+      }
+
+      let std1 = new wallet("ali", 100);
+      std1.addmony(100);
+
+      std1.minusmony(10);
+      std1.logmony();
+
+      let std2 = new wallet("reza", 25);
+      std1.addmony(100);
+      std1.addmony(50);
+      std2.logmony();
+    </script>
+  </body>
+</html>

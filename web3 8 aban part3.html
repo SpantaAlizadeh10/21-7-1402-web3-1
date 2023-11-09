@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let test = 15;
+      if (1 == 1) {
+        console.log("hi");
+        console.log(test);
+      }
+      console.log(test);
+      console.log("======================");
+
+      function fn() {
+        let test = 15;
+        console.log(test);
+      }
+      fn();
+      console.log(test);
+
+      function fn() {
+        var test = 15;
+      }
+      fn();
+      console.log(test);
+
+      console.log("======================");
+
+      class Car {
+        color = "red";
+        speed = 100;
+        goForward() {
+          console.log("go streaight ahead");
+        }
+      }
+
+      var pride = newCar();
+      pride.goForward();
+      console.log(pride.color);
+
+      var bmw = new Car();
+      bmw.clor = "blue";
+      console.log(bmw);
+    </script>
+  </body>
+</html>
