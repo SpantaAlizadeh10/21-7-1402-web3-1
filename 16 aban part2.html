@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .modal {
+        position: fixed;
+        width: 50%;
+        height: 50%;
+        top: 25%;
+        left: 25%;
+        background-color: blueviolet;
+        border-radius: 10px;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showloginmodal()">login</button>
+    <div class="modal" style="display: none" id="loginmodal">
+      lfsdklfjslkdjfsfosjdklfjs.
+      <span
+        style="position: absolute; right: 0%; top: 0%; cursor: pointer"
+        onclick="hideloginmodal()"
+        >x</span
+      >
+    </div>
+    <script>
+      function showloginmodal() {
+        document.getElementById("loginmodal").style.display = "block";
+      }
+      function hideloginmodal() {
+        document.getElementById("loginmodal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

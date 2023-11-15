@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+
+      .side-nav {
+        position: fixed;
+        width: 200px;
+        height: 100px;
+        background-color: aqua;
+        right: -200;
+        top: 0%;
+        color: brown;
+        transition: 0.5s;
+      }
+
+      .side-nav .close {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        font-size: 25px;
+        cursor: pointer;
+      }
+
+      .side-nav .show {
+        right: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="side-nav" id="sidenav">
+      <span class="close" onclick="hidesidenav()">x</span>
+    </div>
+
+    <script>
+      function showsidenav() {
+        document.getElementById("sidenav").classList.add("show");
+      }
+
+      function hidesidenav() {
+        document.getElementById("sidenav").classList.remove("show");
+      }
+    </script>
+
+    <script></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">weight</label>
+    <input id="weight" />
+    <br />
+    <br />
+    <label for="">height</label>
+    <input id="height" />
+    <br />
+    <br />
+    <button onclick="clikme()">محاسبه</button>
+    <hr />
+    <p>مقرار bmi شما برابر است با<span id="bmi">====</span></p>
+    <p id="bmitext"></p>
+    <script>
+      function clikme() {
+        let weight = Number(document.getElementById("weight").value);
+        let height = Number(document.getElementById("height").value);
+        let bmi = Math.round(weight / height ** 2);
+
+        document.getElementById("bmi").innerText = bmi;
+
+        let textelement = document.getElementById("bmitext");
+
+        if (bmi < 18) {
+          textelement.innerText = "کمبود وزن";
+        } else if (bmi >= 18 && bmi < 28) {
+          textelement.innertext = "وزن سلامت";
+        } else {
+          textelement.innertext = "اضافه وزن";
+        }
+      }
+    </script>
+  </body>
+</html>
