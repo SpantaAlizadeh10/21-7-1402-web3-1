@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="ddd">try me</button>
+    <p id="mybtn"></p>
+    <p id="demo"></p>
+    <script>
+      var x = document.getElementById("ddd");
+      x.addEventListener("mouseover", myFunction);
+      x.addEventListener("click", mySecondFunction);
+      x.addEventListener("moueout", myThirdFunction);
+
+      function myFunction() {
+        document.getElementById("mybtn").innerHTML += "moused over!<br>";
+      }
+
+      function mySecondFunction() {
+        doucument.getElementById("mybtn").innerHTML += "clicked!<br>";
+      }
+
+      function myThirdFunction() {
+        doucument.getElementById("mybtn").innerHTML += "mouse out!<br>";
+      }
+
+      window.addEventListener("resize", function () {
+        doucument.getElementById("demo").innerHTML = Math.random();
+      });
+    </script>
+  </body>
+</html>

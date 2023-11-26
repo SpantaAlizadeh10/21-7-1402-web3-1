@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">click me</button>
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        alert("hi");
+      });
+      function sum(num1, num2) {
+        return num1 + num2;
+      }
+
+      let test = sum;
+    </script>
+  </body>
+</html>

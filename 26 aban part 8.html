@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="userInfoBtn">hover me</button>
+    <br />
+    <div
+      id="userInfoDetails"
+      style="
+        display: none;
+        background-color: brown;
+        width: 150px;
+        height: 100px;
+      "
+    ></div>
+
+    <script>
+      let showUserInfoDetail = () => {
+        document.getElementById("userInfoDetails").style.display = "block";
+      };
+      let hideUserInfoDetail = () => {
+        document.getElementById("userInfoDetails").style.display = "none";
+      };
+
+      let timeoutUserDetails = null;
+
+      document.getElementById("userInfoBtn").onmouseover = function () {
+        setTimeout(showUserInfoDetail, 100);
+        clearTimeout(timeoutUserDetails);
+      };
+
+      document.getElementById("userInfoDetails").onmouseleave = function () {
+        timeoutUserDetails = setTimeout(hideUserInfoDetail, 200);
+      };
+      document.getElementById("userInfoDetails").onmouseleave = function () {
+        clearTimeout(timeoutUserDetails);
+      };
+    </script>
+  </body>
+</html>

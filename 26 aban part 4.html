@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div id="myDive" , style="background-color: aqua">
+      <p>
+        Lorem ipsum, dolor sit amet co nsectetur adipisicing elit. Illum eius
+        hic, ea sed enim, praesentium architecto ratione incidunt minima earum
+        itaque rem, tempor e aliquam nobis? Nemo amet deserunt dolorem odio!
+      </p>
+      <button onclick="removeHandler()" id="myBtn">Remove</button>
+    </div>
+    <p id="demo"></p>
+    <script>
+      document
+        .getElementById("myDive")
+        .addEventListener("mousemove", myFunction);
+      function myFunction() {
+        document.getElementById("demo").innerHTML = Math.random();
+      }
+      function removeHandler() {
+        document
+          .getElementById("myDive")
+          .removeEventListener("mousemove", myFunction);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="mydiv1">
+      <h2>bubling:</h2>
+      <p id="myp1">click me!</p>
+    </div>
+    <br />
+
+    <div id="mydiv2">
+      <h2>captering:</h2>
+      <p id="myp2">click me!</p>
+    </div>
+    <br />
+
+    <script>
+      document.getElementById("myp1").addEventListener(
+        "click",
+        function () {
+          alert("you clicked the white element!");
+        },
+        false
+      );
+
+      document.getElementById("mydiv1").addEventListener(
+        "click",
+        function () {
+          alert("you clicked the orange element!");
+        },
+        false
+      );
+
+      document.getElementById("myp2").addEventListener(
+        "click",
+        function () {
+          alert("you clicked the white element!");
+        },
+        true
+      );
+
+      document.getElementById("mydiv2").addEventListener(
+        "click",
+        function () {
+          alert("you clicked the orange element!");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

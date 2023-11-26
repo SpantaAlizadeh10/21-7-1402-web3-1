@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        background-color: red;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="#" data-page="home">home</a>
+      <a href="#" data-page="product">product</a>
+      <a href="#" data-page="about">about</a>
+    </nav>
+  </body>
+  <script>
+    let path = document.location.pathname;
+    document.querySelector(`[data-page=${path}]`).classList.add("active");
+  </script>
+</html>
